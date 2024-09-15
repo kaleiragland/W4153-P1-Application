@@ -14,9 +14,9 @@ class CourseResource(BaseResource):
         # TODO -- Replace with dependency injection.
         #
         self.data_service = ServiceFactory.get_service("CourseResourceDataService")
-        self.database = "course_management"
+        self.database = "p1_database"
         self.collection = "course_sections"
-        self.key_field="sis_course_id"
+        self.key_field="course_id"
 
     def get_by_key(self, key: str) -> CourseSection:
 
